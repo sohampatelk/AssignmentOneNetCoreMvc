@@ -14,6 +14,8 @@ namespace AssignmentOneNetCoreMvc.Controllers
             // Get Car items from database
             // Put Car items into a model
             // Render view using the model
+            
+
         }
     }
 }
