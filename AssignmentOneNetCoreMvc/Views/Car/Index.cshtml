@@ -1,0 +1,38 @@
+﻿@model CarViewModel
+@{
+    ViewData["Title"] = "Manage your Car list";
+}
+<div class="panel panel-default todo-panel">
+    <div class="panel-heading">@ViewData["Title"]</div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>&#x2714;</td>
+                <td>Make</td>
+                <td>Model</td>
+                <td>Year</td>
+                <td>Type</td>
+                <td>IsNew</td>
+            </tr>
+        </thead>
+        @foreach (var item in Model.Details)
+        {
+            <tr>
+                <td>
+                    <form asp-action="MarkDone" method="POST">
+                        <input type="checkbox" class="done-checkbox">
+                        <input type="hidden" name="id" value="@item.Id">
+                    </form>
+                </td>
+                <td>@item.Make</td>
+                <td>@item.Model</td>
+                <td>@item.Year</td>
+                <td>@item.Type</td>
+                <td>@item.IsNew</td>
+            </tr>
+        }
+    </table>
+    <div class="panel-footer add-item-form">
+        <!-- TODO: Add item form -->
+    </div>
+</div>

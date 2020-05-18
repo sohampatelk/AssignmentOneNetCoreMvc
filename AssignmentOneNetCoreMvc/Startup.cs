@@ -12,6 +12,7 @@ using AssignmentOneNetCoreMvc.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using AssignmentOneNetCoreMvc.Services;
 
 namespace AssignmentOneNetCoreMvc
 {
@@ -33,8 +34,15 @@ namespace AssignmentOneNetCoreMvc
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
-           services.AddRazorPages();
-            services.AddSingleton<ICarDetailService,GetCarReportAsync>();
+            services.AddRazorPages();
+            services.AddMvc();
+            services.AddSingleton<ICarDetailService,FakeCarDetailService>();
+
+            //service for connectiong a database
+            services.AddDbContext<ApplicationDbContext>(
+                options =>options.UseSqlite(
+                Configuration.GetConnectionString("DefaultConnection")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -12,6 +12,8 @@ namespace AssignmentOneNetCoreMvc.Models
         public string Model { get; set; }
         [Required]
         public int Year { get; set; }
+        [Required]
+        public string Type { get; set; }
         public bool IsNew { get; set; }
     }
 }

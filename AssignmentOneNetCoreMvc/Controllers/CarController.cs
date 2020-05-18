@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AssignmentOneNetCoreMvc.Services;
-
+using AssignmentOneNetCoreMvc.Models;
 
 namespace AssignmentOneNetCoreMvc.Controllers
 {
@@ -17,13 +17,13 @@ namespace AssignmentOneNetCoreMvc.Controllers
             _carDetailService = carDetailService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-
-            var details = await _carDetailService.GetCarReportAsync();
             // Get Car items from database
             // Put Car items into a model
             // Render view using the model
+            var details = await _carDetailService.GetCarReportAsync();
+            
             var model = new CarViewModel()
             {
                 Details = details
