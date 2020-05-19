@@ -31,5 +31,20 @@ namespace AssignmentOneNetCoreMvc.Controllers
             return View(model);
 
         }
+
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddDetail(CarDetail newDetail)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _carDetailService.AddDetailAsync(newDetail);
+            if (!successful)
+            {
+                return BadRequest("Could not add item.");
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

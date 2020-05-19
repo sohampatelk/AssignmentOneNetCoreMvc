@@ -36,7 +36,8 @@ namespace AssignmentOneNetCoreMvc
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddMvc();
-            services.AddSingleton<ICarDetailService,FakeCarDetailService>();
+            //services.AddSingleton<ICarDetailService,FakeCarDetailService>();
+            services.AddScoped<ICarDetailService,CarDetailService>();
 
             //service for connectiong a database
             services.AddDbContext<ApplicationDbContext>(

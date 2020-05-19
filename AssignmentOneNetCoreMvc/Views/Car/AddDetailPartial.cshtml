@@ -1,0 +1,15 @@
+﻿@model CarDetail
+
+<form asp-action="AddDetail" method="POST">
+    <label asp-for="Make">Add a new Make:</label>
+    <input asp-for="Make">
+    <label asp-for="Model">Add a new Model:</label>
+    <input asp-for="Model">
+    <label asp-for="Year">Add a new Year:</label>
+    <input asp-for="Year">
+    <label asp-for="Type">Add a new Type:</label>
+    <input asp-for="Type">
+    <label asp-for="IsNew">IsNew:</label>
+    <input asp-for="IsNew">
+    <button type="submit">Add</button>
+</form>

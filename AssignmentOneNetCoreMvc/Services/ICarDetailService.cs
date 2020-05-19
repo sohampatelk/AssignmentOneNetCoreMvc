@@ -8,5 +8,7 @@ namespace AssignmentOneNetCoreMvc.Services
     public interface ICarDetailService
     {
         Task<CarDetail[]> GetCarReportAsync();
+
+        Task<bool> AddDetailAsync(CarDetail newDetail);
     }
 }

@@ -209,3 +209,4 @@ C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\AssignmentOneNetCoreMvc\Assignment
 C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\AssignmentOneNetCoreMvc\AssignmentOneNetCoreMvc\obj\Debug\netcoreapp3.1\AssignmentOneNetCoreMvc.csproj.CoreCompileInputs.cache
 C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\AssignmentOneNetCoreMvc\AssignmentOneNetCoreMvc\obj\Debug\netcoreapp3.1\AssignmentOneNetCoreMvc.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\AssignmentOneNetCoreMvc\AssignmentOneNetCoreMvc\obj\Debug\netcoreapp3.1\AssignmentOneNetCoreMvc.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\AssignmentOneNetCoreMvc\AssignmentOneNetCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Car\AddDetailPartial.cshtml.g.cs
